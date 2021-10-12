@@ -1,0 +1,46 @@
+{
+  "name": "trip-planner",
+  "version": "1.0.0",
+  "description": "My MVP project for HackReactor",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "webpack --config ./webpack.config.js --mode development -w",
+    "start": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andeezy/trip-planner.git"
+  },
+  "keywords": [
+    "react",
+    "node",
+    "express",
+    "mvp"
+  ],
+  "author": "Andy Fang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andeezy/trip-planner/issues"
+  },
+  "homepage": "https://github.com/andeezy/trip-planner#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "jest": "^27.2.5",
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.9.0"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "axios": "^0.23.0",
+    "eslint": "^8.0.0",
+    "express": "^4.17.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
