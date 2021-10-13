@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Video from '../../videos/video.mp4';
-import { Button } from '../ButtonElement.js';
+import { Button } from '../ButtonElements.js';
 import { HeroContainer, HeroBg, VideoBg, Content, H1, P, BtnWrapper, ArrowForward, ArrowRight } from './HeroElements.js';
 
 const HeroSection = () => {
@@ -21,7 +21,7 @@ const HeroSection = () => {
         <BtnWrapper>
           <Button to='singup' onMouseEnter={onHover} onMouseLeave={onHover}
             primary='true' dark='true' big='true'>
-            Get strated {hover ? <ArrowForward /> : <ArrowRight />}
+            Get started {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
         </BtnWrapper>
       </Content>

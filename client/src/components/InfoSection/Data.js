@@ -1,0 +1,33 @@
+export const homeObjOne = {
+  id: 'about',
+  lightBg: false,
+  lightText: true,
+  lightTextDesc: true,
+  topLine: 'Born To Brew',
+  headline: 'Find your next favorite brewery',
+  description: 'Get access to our exclusive access to breweries across the nation.',
+  buttonLabel: 'Get Started',
+  imgStart: false,
+  // img: require('../../images/svg-1.svg'),
+  alt: 'Car',
+  dark: true,
+  primary: true,
+  darkText: false,
+}
+
+export const homeObjTwo = {
+  id: 'discover',
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
+  topLine: 'Unlimited Access',
+  headline: 'Next Step is yours',
+  description: 'Get access to our exclusive access to breweries across the nation.',
+  buttonLabel: 'Get Started',
+  imgStart: true,
+  // img: require('../../images/svg-1.svg'),
+  alt: 'beer',
+  dark: false,
+  primary: false,
+  darkText: true,
+}
