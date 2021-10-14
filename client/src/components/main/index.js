@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Video from '../../videos/video.mp4';
-import { SearchButton } from '../ButtonElements.js';
+import { Button } from '../ButtonElements.js';
 import { HeroContainer, HeroBg, VideoBg, Content, H1, P, BtnWrapper, Text1, Text2, Input, ArrowForward, ArrowRight } from './MainElements.js';
 import { FaSearch } from 'react-icons/fa';
 
@@ -26,14 +26,15 @@ const Main = () => {
           <Input value={name} onChange={(e) => {
             setName(e.target.value);
             console.log('name', name);
-            }} />
+          }} />
           <Text2>Near</Text2>
           <Input value={city} onChange={(e) => setCity(e.target.value)} />
-          <SearchButton to='/search' onMouseEnter={onHover} onMouseLeave={onHover}
-            primary='true' dark='true' big='true'>
+          <Button to='discover' onMouseEnter={onHover} onMouseLeave={onHover}
+            primary='true' dark='true' big='true'
+            smooth={true} duration={500} spy={true} exact='true'>
             <FaSearch />
             {/* {hover ? <ArrowForward /> : <ArrowRight />} */}
-          </SearchButton>
+          </Button>
         </BtnWrapper>
       </Content>
     </HeroContainer>

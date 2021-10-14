@@ -19,8 +19,8 @@ const NavBar = (props) => {
     window.addEventListener('scroll', changeNav)
   }, []);
 
-  const click = () => {
-    console.log('Click');
+  const onClick = () => {
+    axios.get('')
   }
 
   const toggleHome = () => {
@@ -37,10 +37,10 @@ const NavBar = (props) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to='about' smooth={true} duration={500} spy={true} exact='true' offset={-80}onClick={click} >About</NavLinks>
+              <NavLinks to='about' smooth={true} duration={500} spy={true} exact='true' offset={-80}onClick={onClick} >About</NavLinks>
             </NavItem>
             <NavItem>
-              <NavRouter to='/search' onClick={click}>Discover</NavRouter>
+            <NavLinks to='discover' smooth={true} duration={500} spy={true} exact='true' offset={-80}onClick={onClick} >Discover</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks to='services' smooth={true} duration={500} spy={true} exact='true' offset={-80}>Services</NavLinks>
