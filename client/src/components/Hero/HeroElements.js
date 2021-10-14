@@ -93,15 +93,32 @@ export const P = styled.p`
 export const BtnWrapper = styled.div`
   margin-top: 32px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 `;
 
+export const Text1 = styled.p`
+  padding: 13px 9px 12px 9px;
+  border: none;
+  background: white;
+  text-align: center;
+  color: black;
+  border-radius: 10px 0 0 10px;
+  font-size: 16px;
+`
+export const Text2 = styled.p`
+  padding: 13px 9px 12px 9px;
+  // border: none;
+  background: white;
+  text-align: center;
+  color: black;
+  border-left: 1px solid;
+`
 export const Input = styled.input`
-  padding: 16px 16px;
-  margin-bottom: 32px;
-  botder: none;
-  border-radius: 4px;
+  padding: 14px 40px;
+  // margin-bottom: 32px;
+  border: none;
+  // border-radius: 0 0 0 10px;
 `
 
 export const ArrowForward = styled(MdArrowForward)`

@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import { Link } from 'react-scroll';
 
 export const Button = styled(Link)`
-  border-radius: 50px;
+  border-radius: 0 10px 10px 0;
   background: ${({ primary }) => (primary ? '#DBA800' : '#010606')};
   white-space: nowrap;
-  padding: ${({ big }) => (big ? '14px 40px' : '12px 30px')};
+  padding: ${({ big }) => (big ? '14px 40px' : '14px 30px')};
   color: ${({ dark }) => (dark ? '#010606' : '#fff')};
   font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
   outline: none;

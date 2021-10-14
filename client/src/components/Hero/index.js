@@ -1,20 +1,17 @@
 import React, { useState } from 'react';
 import Video from '../../videos/video.mp4';
 import { Button } from '../ButtonElements.js';
-import { HeroContainer, HeroBg, VideoBg, Content, H1, P, BtnWrapper, Input, ArrowForward, ArrowRight } from './HeroElements.js';
+import { HeroContainer, HeroBg, VideoBg, Content, H1, P, BtnWrapper, Text1, Text2, Input, ArrowForward, ArrowRight } from './HeroElements.js';
 import { FaSearch } from 'react-icons/fa';
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
-  const [search, setSearch] = useState('');
+  const [name, setName] = useState('');
+  const [city, setCity] = useState('');
 
   const onHover = () => {
     setHover(!hover);
   };
-
-  const onChange = (e) => {
-    setSearch(e.target.value);
-  }
 
   return (
     <HeroContainer>
@@ -25,7 +22,13 @@ const HeroSection = () => {
         <H1>Beers and Brews</H1>
         <P>Finding your next brew on tap just got easier</P>
         <BtnWrapper>
-          <Input value={search} onChange={onChange} />
+          <Text1>Find</Text1>
+          <Input value={name} onChange={(e) => {
+            setName(e.target.value);
+            console.log('name', name);
+            }} />
+          <Text2>Near</Text2>
+          <Input value={city} onChange={(e) => setCity(e.target.value)} />
           <Button to='search' onMouseEnter={onHover} onMouseLeave={onHover}
             primary='true' dark='true' big='true'>
             <FaSearch />

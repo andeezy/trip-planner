@@ -88,7 +88,7 @@ export const FormLabel = styled.label`
 export const FormInput = styled.input`
   padding: 16px 16px;
   margin-bottom: 32px;
-  botder: none;
+  border: none;
   border-radius: 4px;
 `;
 
