@@ -5,7 +5,7 @@ import { Container, Background, VideoBg, Content, H1, P, BtnWrapper, Text1, Text
 import { FaSearch } from 'react-icons/fa';
 
 const Main = (props) => {
-  const { onClick } = props;
+  const { onClick, getCity } = props;
   const [hover, setHover] = useState(false);
   const [name, setName] = useState('');
   const [city, setCity] = useState('');
@@ -32,7 +32,13 @@ const Main = (props) => {
           <Input value={city} onChange={(e) => setCity(e.target.value)} />
           <Button to='discover' onMouseEnter={onHover} onMouseLeave={onHover}
             primary='true' dark='true' big='true' offset={-80}
-            smooth={true} duration={500} spy={true} exact='true' onClick={() => onClick(name, city)} >
+            smooth={true} duration={500} spy={true} exact='true' onClick={() => {
+              if (!name) {
+                getCity(city);
+              } else {
+                onClick(name, city);
+              }
+            }} >
             <FaSearch />
             {/* {hover ? <ArrowForward /> : <ArrowRight />} */}
           </Button>

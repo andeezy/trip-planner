@@ -29,7 +29,7 @@ app.get('/breweries/:name', (req, res) => {
     .catch((err) => console.log(err));
 });
 
-app.get('/breweries/:city', (req, res) => {
+app.get('/brewery/:city', (req, res) => {
   console.log('city ', req.params);
   helpers.getByCity(req.params.city)
     .then((result) => {

@@ -21,13 +21,24 @@ class Home extends React.Component {
   }
   // const[isOpen, setIsOpen] = useState(false);
 
+  getCity(city) {
+    axios.get(`/brewery/${city}`)
+      .then((res) => {
+        console.log(res.data);
+        this.setState({
+          breweries: res.data,
+          city: '',
+        });
+      })
+      .catch((err) => console.log(err));
+  }
   getRequest() {
     axios.get('/breweries')
       .then((res) => {
         console.log(res.data);
         this.setState({
           breweries: res.data
-        })
+        });
       })
       .catch((err) => console.log(err));
   }
@@ -57,7 +68,7 @@ class Home extends React.Component {
       <>
         <SideBar isOpen={isOpen} toggle={this.onToggle} />
         <NavBar toggle={this.onToggle} getRequest={this.getRequest.bind(this)} />
-        <Main onClick={this.onClick.bind(this)} />
+        <Main onClick={this.onClick.bind(this)} getCity={this.getCity.bind(this)} />
         <InfoSection {...homeObjOne} />
         <BreweriesList breweries={breweries} />
         {/* <Services /> */}
