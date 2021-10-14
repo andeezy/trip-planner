@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
 import Video from '../../videos/video.mp4';
 import { Button } from '../ButtonElements.js';
-import { HeroContainer, HeroBg, VideoBg, Content, H1, P, BtnWrapper, ArrowForward, ArrowRight } from './HeroElements.js';
+import { HeroContainer, HeroBg, VideoBg, Content, H1, P, BtnWrapper, Input, ArrowForward, ArrowRight } from './HeroElements.js';
+import { FaSearch } from 'react-icons/fa';
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
+  const [search, setSearch] = useState('');
 
   const onHover = () => {
     setHover(!hover);
   };
+
+  const onChange = (e) => {
+    setSearch(e.target.value);
+  }
 
   return (
     <HeroContainer>
@@ -19,9 +25,11 @@ const HeroSection = () => {
         <H1>Beers and Brews</H1>
         <P>Finding your next brew on tap just got easier</P>
         <BtnWrapper>
-          <Button to='singup' onMouseEnter={onHover} onMouseLeave={onHover}
+          <Input value={search} onChange={onChange} />
+          <Button to='search' onMouseEnter={onHover} onMouseLeave={onHover}
             primary='true' dark='true' big='true'>
-            Get started {hover ? <ArrowForward /> : <ArrowRight />}
+            <FaSearch />
+            {/* {hover ? <ArrowForward /> : <ArrowRight />} */}
           </Button>
         </BtnWrapper>
       </Content>

@@ -97,6 +97,13 @@ export const BtnWrapper = styled.div`
   align-items: center;
 `;
 
+export const Input = styled.input`
+  padding: 16px 16px;
+  margin-bottom: 32px;
+  botder: none;
+  border-radius: 4px;
+`
+
 export const ArrowForward = styled(MdArrowForward)`
   margin-left: 8px;
   font-size: 20px;

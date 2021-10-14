@@ -1,6 +1,6 @@
 import React from 'react';
 // import Icon1 from '../../images/svg-1.svg'
-import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP } from './ServicesElements';
+import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP } from './ServicesElements.js';
 
 const Services = () => {
   return (
