@@ -31,7 +31,7 @@ const Main = (props) => {
           <Text2>Near</Text2>
           <Input value={city} onChange={(e) => setCity(e.target.value)} />
           <Button to='discover' onMouseEnter={onHover} onMouseLeave={onHover}
-            primary='true' dark='true' big='true'
+            primary='true' dark='true' big='true' offset={-80}
             smooth={true} duration={500} spy={true} exact='true' onClick={() => onClick(name, city)} >
             <FaSearch />
             {/* {hover ? <ArrowForward /> : <ArrowRight />} */}

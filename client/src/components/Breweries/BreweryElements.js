@@ -9,13 +9,13 @@ justify-content: center;
 align-items: center;
 // background: #010606;
 background: #DBA800;
-overflow-y: scroll;
-max-height: 100vh;
-min-height: 0vh;
-&:: -webkit-scrollbar {
-  width: 10px;
-  border: 1px solid black;
-}
+// overflow: scroll;
+// max-height: 100vh;
+// min-height: 0vh;
+// &:: -webkit-scrollbar {
+//   width: 10px;
+//   border: 1px solid black;
+// }
 
 @media screen and (max-width: 768px) {
   height; 1100px;
@@ -45,10 +45,24 @@ padding: 0 50px;
 }
 `;
 
+export const Heading = styled.h1`
+  margin-bottom: 24px;
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: #f7f8fa;
+
+  @media screen and (max-width: 480px) {
+    font-size: 32px;
+  }
+`;
+
 export const Row = styled.div`
 display: grid;
 grid-auto-columns: minmax(auto, 1fr);
 align-items: center;
+border: 1px solid red;
+
 grid-template-areas: ${({ imgStart }) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
 @media screen and (max-width: 768px) {
@@ -57,7 +71,11 @@ grid-template-areas: ${({ imgStart }) => (imgStart ? `'col2 col1'` : `'col1 col2
 `;
 
 export const Column1 = styled.div`
-  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col1;
 `;
@@ -81,6 +99,8 @@ border-bottom: 1px solid #eeeeef;
 border-right: 1px solid #eeeeef;
 border-top: 1px solid #eeeeef;
 max-height: 340px;
+min-width: 340px;
+max-width: 340px;
 padding: 24px 24px 24px 24px;
 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 transition: all 0.2s ease-in-out;

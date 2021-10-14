@@ -4,3 +4,9 @@
   padding: 0;
   font-family: sans-serif;
 }
+
+.brewery {
+  overflow-y: scroll;
+  max-height: 30vh;
+  min-height: 0vh;
+}

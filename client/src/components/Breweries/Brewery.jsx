@@ -3,17 +3,19 @@ import { Container, Wrapper, Row, Column1, Column2, BreweryCard } from './Brewer
 
 const Brewery = (props) => {
   return (
-    <Container>
-      <Row>
-        <Column1>
-          <BreweryCard>
-            {props.brewery.name}
-          </BreweryCard>
-        </Column1>
-        <Column2>
-        </Column2>
-      </Row>
-    </Container>
+    <div className='brewery' >
+      <Container id={'discover'}>
+        <Row>
+          <Column1>
+            <BreweryCard>
+              {props.brewery.name}
+            </BreweryCard>
+          </Column1>
+          <Column2>
+          </Column2>
+        </Row>
+      </Container>
+    </div>
   )
 };
 
