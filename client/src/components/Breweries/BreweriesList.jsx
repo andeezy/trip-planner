@@ -1,13 +1,16 @@
 import React from 'react';
-import NavBar from '../NavBar.jsx';
+import Brewery from './Brewery.jsx';
 
-const Search = () => {
+const BreweriesList = (props) => {
   return (
-    <NavBar />
+    <div>
+      {props.breweries.map((brewery, index) =>
+        <Brewery brewery={brewery} key={index} />)}
+    </div>
   )
 }
 
-export default Search;
+export default BreweriesList;
 
 /*
 <Container>

@@ -23,13 +23,13 @@ app.get('/breweries/:name', (req, res) => {
   console.log('name ', req.params);
   helpers.getByName(req.params.name)
     .then((result) => {
-      console.log('data', result.data);
+      // console.log('data', result.data);
       res.status(200).send(result.data);
     })
     .catch((err) => console.log(err));
 });
 
-app.get('/brewery/:city', (req, res) => {
+app.get('/breweries/:city', (req, res) => {
   console.log('city ', req.params);
   helpers.getByCity(req.params.city)
     .then((result) => {
@@ -43,7 +43,7 @@ app.get('/breweries/:name/:city', (req, res) => {
   console.log('name ', req.params);
   helpers.getByNameAndCity(req.params)
     .then((result) => {
-      console.log('data', result.data);
+      // console.log('data', result.data);
       res.status(200).send(result.data);
     })
     .catch((err) => console.log(err));

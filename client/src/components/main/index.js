@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Video from '../../videos/video.mp4';
 import { Button } from '../ButtonElements.js';
-import { HeroContainer, HeroBg, VideoBg, Content, H1, P, BtnWrapper, Text1, Text2, Input, ArrowForward, ArrowRight } from './MainElements.js';
+import { Container, Background, VideoBg, Content, H1, P, BtnWrapper, Text1, Text2, Input, ArrowForward, ArrowRight } from './MainElements.js';
 import { FaSearch } from 'react-icons/fa';
 
-const Main = () => {
+const Main = (props) => {
+  const { onClick } = props;
   const [hover, setHover] = useState(false);
   const [name, setName] = useState('');
   const [city, setCity] = useState('');
@@ -14,10 +15,10 @@ const Main = () => {
   };
 
   return (
-    <HeroContainer>
-      <HeroBg>
+    <Container>
+      <Background>
         <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
-      </HeroBg>
+      </Background>
       <Content>
         <H1>Beers and Brews</H1>
         <P>Finding your next brew on tap just got easier</P>
@@ -31,13 +32,13 @@ const Main = () => {
           <Input value={city} onChange={(e) => setCity(e.target.value)} />
           <Button to='discover' onMouseEnter={onHover} onMouseLeave={onHover}
             primary='true' dark='true' big='true'
-            smooth={true} duration={500} spy={true} exact='true'>
+            smooth={true} duration={500} spy={true} exact='true' onClick={() => onClick(name, city)} >
             <FaSearch />
             {/* {hover ? <ArrowForward /> : <ArrowRight />} */}
           </Button>
         </BtnWrapper>
       </Content>
-    </HeroContainer>
+    </Container>
   )
 }
 

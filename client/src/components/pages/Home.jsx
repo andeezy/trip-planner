@@ -5,26 +5,55 @@ import Main from '../main';
 import InfoSection from '../InfoSection';
 import { homeObjOne, homeObjTwo } from '../InfoSection/Data.js';
 import Services from '../Services';
+import axios from 'axios';
+import BreweriesList from '../Breweries/BreweriesList.jsx';
 // import Footer from './Footer';
 
-const Home = () => {
-  const [isOpen, setIsOpen] = useState(false);
+class Home extends React.Component {
+  constructor(props) {
+    super(props);
 
-  const toggle = () => {
-    setIsOpen(!isOpen);
+    this.state = {
+      breweries: [],
+      isOpen: false,
+    }
+    this.onToggle = this.onToggle.bind(this);
+  }
+  // const[isOpen, setIsOpen] = useState(false);
+
+  onClick(name, city) {
+    // console.log('Click');
+    axios.get(`/breweries/${name}/${city}`)
+      .then((res) => {
+        console.log(res.data);
+        this.setState({
+          breweries: res.data,
+          name: '',
+          city: '',
+        });
+      })
+      .catch((err) => console.log(err));
   }
 
-  return (
-    <>
-      <SideBar isOpen={isOpen} toggle={toggle} />
-      <NavBar toggle={toggle} />
-      <Main />
-      <InfoSection {...homeObjOne} />
-      <InfoSection {...homeObjTwo} />
-      <Services />
-      {/* <Footer /> */}
-    </>
-  )
+  onToggle() { this.setState({ isOpen: !this.state.isOpen }) }
+
+  // const toggle = () => {
+  //   setIsOpen(!isOpen);
+  // }
+  render() {
+    const {isOpen, breweries} = this.state;
+    return (
+      <>
+        <SideBar isOpen={isOpen} toggle={this.onToggle} />
+        <NavBar toggle={this.onToggle} />
+        <Main onClick={this.onClick.bind(this)} />
+        <InfoSection {...homeObjOne} />
+        <BreweriesList breweries={breweries} />
+        <Services />
+        {/* <Footer /> */}
+      </>
+    )
+  }
 }
 
 export default Home;

@@ -20,7 +20,7 @@ const NavBar = (props) => {
   }, []);
 
   const onClick = () => {
-    axios.get('')
+    console.log('Click');
   }
 
   const toggleHome = () => {

@@ -1,12 +1,12 @@
 import React from 'react';
 import NavBar from '../NavBar.jsx';
-import Search from '../Search';
+import Breweries from '../Breweries/BreweriesList.jsx';
 
 const SearchPage = () => {
   return (
     <>
       <NavBar />
-      <Search />
+      <Breweries />
     </>
   )
 }
