@@ -8,7 +8,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 // background: #010606;
-background: #DBA800;
+// background: #DBA800;
 // overflow: scroll;
 // max-height: 100vh;
 // min-height: 0vh;

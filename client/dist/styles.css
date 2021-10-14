@@ -5,8 +5,13 @@
   font-family: sans-serif;
 }
 
-.brewery {
+/* .brewery {
   overflow-y: scroll;
   max-height: 30vh;
   min-height: 0vh;
+} */
+
+.breweries-list {
+  /* background: #DBA800; */
+  background-image: linear-gradient(#010606, #DBA800);
 }
