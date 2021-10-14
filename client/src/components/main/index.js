@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Video from '../../videos/video.mp4';
-import { Button } from '../ButtonElements.js';
-import { HeroContainer, HeroBg, VideoBg, Content, H1, P, BtnWrapper, Text1, Text2, Input, ArrowForward, ArrowRight } from './HeroElements.js';
+import { SearchButton } from '../ButtonElements.js';
+import { HeroContainer, HeroBg, VideoBg, Content, H1, P, BtnWrapper, Text1, Text2, Input, ArrowForward, ArrowRight } from './MainElements.js';
 import { FaSearch } from 'react-icons/fa';
 
-const HeroSection = () => {
+const Main = () => {
   const [hover, setHover] = useState(false);
   const [name, setName] = useState('');
   const [city, setCity] = useState('');
@@ -29,15 +29,15 @@ const HeroSection = () => {
             }} />
           <Text2>Near</Text2>
           <Input value={city} onChange={(e) => setCity(e.target.value)} />
-          <Button to='search' onMouseEnter={onHover} onMouseLeave={onHover}
+          <SearchButton to='/search' onMouseEnter={onHover} onMouseLeave={onHover}
             primary='true' dark='true' big='true'>
             <FaSearch />
             {/* {hover ? <ArrowForward /> : <ArrowRight />} */}
-          </Button>
+          </SearchButton>
         </BtnWrapper>
       </Content>
     </HeroContainer>
   )
 }
 
-export default HeroSection;
+export default Main;

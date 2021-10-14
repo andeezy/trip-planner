@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Nav, NavContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink } from './NavElements.js';
+import { Nav, NavContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavRouter, NavBtn, NavBtnLink } from './NavElements.js';
 import { FaBars } from 'react-icons/fa';
 import { animateScroll as scroll } from 'react-scroll';
 
@@ -35,7 +35,7 @@ const NavBar = (props) => {
               <NavLinks to='about' smooth={true} duration={500} spy={true} exact='true' offset={-80}>About</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='discover' smooth={true} duration={500} spy={true} exact='true' offset={-80}>Discover</NavLinks>
+              <NavRouter to='/search'>Discover</NavRouter>
             </NavItem>
             <NavItem>
               <NavLinks to='services' smooth={true} duration={500} spy={true} exact='true' offset={-80}>Services</NavLinks>

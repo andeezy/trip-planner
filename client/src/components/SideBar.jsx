@@ -16,9 +16,9 @@ const SideBar = (props) => {
           <SideBarLink to='services' onClick={toggle}>Services</SideBarLink>
           <SideBarLink to='signup' onClick={toggle}>Sign Up</SideBarLink>
         </SideBarMenu>
-        <SideBtnWrap>
+        {/* <SideBtnWrap>
           <SideBarRoute to='/signin'>Sign In</SideBarRoute>
-        </SideBtnWrap>
+        </SideBtnWrap> */}
       </SideBarWrapper>
     </SideBarContainer>
   )
