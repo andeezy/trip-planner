@@ -14,9 +14,14 @@ const NavBar = (props) => {
     }
   };
 
+
   useEffect(() => {
     window.addEventListener('scroll', changeNav)
   }, []);
+
+  const click = () => {
+    console.log('Click');
+  }
 
   const toggleHome = () => {
     scroll.scrollToTop();
@@ -32,10 +37,10 @@ const NavBar = (props) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to='about' smooth={true} duration={500} spy={true} exact='true' offset={-80}>About</NavLinks>
+              <NavLinks to='about' smooth={true} duration={500} spy={true} exact='true' offset={-80}onClick={click} >About</NavLinks>
             </NavItem>
             <NavItem>
-              <NavRouter to='/search'>Discover</NavRouter>
+              <NavRouter to='/search' onClick={click}>Discover</NavRouter>
             </NavItem>
             <NavItem>
               <NavLinks to='services' smooth={true} duration={500} spy={true} exact='true' offset={-80}>Services</NavLinks>

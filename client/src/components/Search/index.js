@@ -1,9 +1,16 @@
 import React from 'react';
+import NavBar from '../NavBar.jsx';
 
-const SignIn = () => {
+const Search = () => {
   return (
-    <>
-      {/* <Container>
+    <NavBar />
+  )
+}
+
+export default Search;
+
+/*
+<Container>
         <FormWrap>
           <Icon to='/'>brew</Icon>
           <FormContent>
@@ -18,10 +25,6 @@ const SignIn = () => {
             </Form>
           </FormContent>
         </FormWrap>
-      </Container> */}
-      Search Page
-    </>
-  )
-}
-
-export default SignIn;
+      </Container>
+      <NavBar />
+      */
